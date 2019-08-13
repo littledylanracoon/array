@@ -1,0 +1,56 @@
+
+Q:
+一開始有一個正整數 N (1<=N<=20)，代表有幾張明信片的點播，接下來有 N 個 1~100000000 的正整數，代表這 N 張明信片所點播的歌曲編號。
+
+請輸出點播次數最高的歌曲編號，以及它的點播次數(不用考慮最高點播次數的歌曲有兩首以上的情況)，中間請空一格。
+
+
+
+A:
+
+
+#include<iostream>
+
+using namespace std;
+
+int x,a,b,n,c,d;
+int song[21];
+int num[21]={0};
+int main(){
+
+cin>>n;
+
+for(x=1;x<=n;x++)
+{
+    cin>>song[x];
+
+}
+
+for(a=1;a<=n;a++)
+{
+    for(b=1;b<=n;b++)
+    {
+        if(a!=b && song[a]==song[b])
+            num[a]++;
+    }
+}
+
+c=num[1];
+d=song[1];
+
+for(b=1;b<=n;b++)
+
+{
+    if(num[b]>c)
+    {
+        c=num[b];
+        d=song[b];
+    }
+
+
+}
+
+c++;
+ cout<<d<<" "<<c;
+
+}
