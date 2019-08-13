@@ -1,0 +1,90 @@
+
+
+
+
+Q:
+1.
+一開始有一個正整數 N (1<=N<=10)，代表後面會出現幾個數字，接下來即是這 N 個整數。
+請將這 N 個整數，依原本的順序反向輸出。
+2.
+請輸出最大值出現在第幾個位置(位置從 1 開始算)，以及它是多少，中間請空一格。
+
+1.範例輸入：help
+
+輸入1:
+3 1 2 3
+
+輸入2:
+4 2 4 6 8
+範例輸出 ：
+
+輸出1:
+3 2 1
+
+輸出2:
+8 6 4 2
+
+
+
+A:
+1.
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+
+int n,a,b,c,x;
+int arr[10];
+int main()
+{
+	cin>>n;
+	for(x=1;x<=n;x++)
+        cin>>arr[x];
+
+    for(a=n;a>=1;a--)
+        cout<<arr[a]<<" ";
+
+}
+
+2.
+
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+
+int n,a,b,c,x;
+int arr[10];
+int main()
+{
+	cin>>n;
+	for(x=1;x<=n;x++)
+        cin>>arr[x];
+
+    b=arr[1];
+    c=1;
+
+    for(a=2;a<=n;a++)
+    {
+        if(arr[a]>b)
+        {
+         b=arr[a];
+         c=a;
+        }
+
+    }
+
+    cout<<c<<" "<<b;
+
+
+}
+
+
+
+
+
+
+
+
+
+
