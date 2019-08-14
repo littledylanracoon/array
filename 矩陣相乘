@@ -1,0 +1,54 @@
+#include<iostream>
+
+using namespace std;
+
+int m,n,p,k,i,j;
+
+int main(){
+
+cin>>m>>n;
+int A[m][n];
+for(int i=1;i<=m;i++)
+{
+    for(int j=1;j<=n;j++)
+        cin>>A[i][j];
+}
+
+cin>>n>>p;
+int B[n][p];
+for(int i=1;i<=n;i++)
+{
+    for(int j=1;j<=p;j++)
+        cin>>B[i][j];
+}
+
+int c[m][p];
+for(int i=1;i<=m;i++)
+{
+    for(int j=1;j<=p;j++)
+{
+
+
+     c[i][j]=0;
+    for(int k=1;k<=n;k++){
+        c[i][j]=c[i][j]+A[i][k]*B[k][j];
+
+
+    }
+
+}
+
+}
+for(int i=1;i<=m;i++)
+{
+
+   for(int j=1;j<=p;j++){
+
+    cout<<c[i][j]<<" ";
+        if(j==p) cout<<endl;
+   }
+
+}                                                 
+
+
+}
